@@ -47,14 +47,15 @@ int main(){
     printf("\n");
     for (r=0; r<N; r++) {
         for (c=0; c<M; c++) {
-            if((matr[r][c]%2!=0)&&(k<M)){
+            if((matr[r][c]%2!=0)&&(k<M)&&(k!=M-1)){
                 matr2[i][k]=matr[r][c];
                 k++;
             }
-            if((matr[r][c]%2!=0)&&(k==M-1)){
-                matr2[i][k]=matr[r][c];
-                k=0;
-                i++;
+            else
+                if((matr[r][c]%2!=0)&&(k==M-1)){
+                    matr2[i][k]=matr[r][c];
+                    k=0;
+                    i++;
             }
         }
     }
